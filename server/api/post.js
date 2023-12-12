@@ -13,7 +13,7 @@ const prisma = new PrismaClient()
 ///// GET //////////
 ////////////////////
 
-// route "api/post/" --> Get all posts!
+// route "api/post/" --> Get all posts
 router.get('/', async (req, res) => {
   try{
     const posts = await prisma.post.findMany();
@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
   }
 })
 
-// route "api/post/:id" --> Get one post!
+// route "api/post/:id" --> Get one post
 router.get('/:id', async (req, res) => {
   const postId = parseInt(req.params.id)
 
@@ -46,6 +46,7 @@ router.get('/:id', async (req, res) => {
 ///// CREATE ///////
 ////////////////////
 
+// route "api/post/" --> Create a new post
 router.post('/', async (req,res) => {
   if (!req.user) {res.sendStatus(401)} // Give non-users the "non-authorized" boot
 
@@ -68,11 +69,31 @@ router.post('/', async (req,res) => {
   else res.status(500).send(error);
 })
 
-
 ////////////////////
 ///// PUT //////////
 ////////////////////
 
+// route "api/post/:id" --> Update a post by post id
+router.put('/:id', async (req,res) => {
+  if (!req.user) {res.sendStatus(401)} // Give non-users the "non-authorized" boot
+
+  const postId = parseInt(req.params.id)
+  const postBody = req.body
+
+  try{
+    const updatedPost = await prisma.post.update({
+      where:{
+        id: postId,
+      },
+      data:postBody,
+    })
+
+    res.send(updatedPost)
+  } catch(error) {
+    res.sendStatus(500);
+  }
+
+})
 
 ////////////////////
 ///// DELETE ///////
