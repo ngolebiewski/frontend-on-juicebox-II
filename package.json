@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "seed:dev": "npx prisma migrate reset && node prisma/seed.js",
+    "start:dev": "nodemon server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "install:stuff": "npm i express && npm i nodemon && npm install jsonwebtoken && npm i bcrypt && npm i morgan && npm i dotenv && npm i express-router && npm install @faker-js/faker --save-dev"
   },

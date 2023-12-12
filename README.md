@@ -7,7 +7,8 @@ For this project, you will be recreating the Juicebox API from scratch with the 
 Please submit a link to your Github repo.
 
 # Nick Golebiewski
-## The Juicebox Blog ##
+## The Juicebox Blog 
+## Fullstack Academy Career Sim
 ### 12-12-2023 
 
 ## LOL, my notes will be like a blog about making a blog API!
@@ -23,6 +24,14 @@ Please submit a link to your Github repo.
 - 10:39am Things running surpisingly smoothly so far. trying to get as much done before heading out for alternate side parking and typing in a car -- Ugh. 
 - 10:40 Seed ticket #3. Psyched about using Faker -- I practiced that last night, to put in well, fake information. It's surprisingly hard to think of a bunch of fake information on your own!
 - 10:42 Doing this... ```npm install @prisma/client``` ... thank you documentation!
+- 10:45 looking up faker https://fakerjs.dev/guide/ for seed content
+- 11:05 in car now cramped and on laptop leaning on steering wheel. First honks of the street cleaner are to be heard
+- 11:27am finsihed seed.js. It's really cold in this car. Can't run heat because the battery will die since I hardly drive.
+- 11:34 SERVER TIME - looking up https://expressjs.com/en/guide/routing.html to remember how to require, etc. for server.js. I think I need fingerless gloves for typing outdoors in the winter.
+- 11:52 API and AUTH routes set up. Just 38 minutes to go until I can leave this car!
+
+
+
 
 
 

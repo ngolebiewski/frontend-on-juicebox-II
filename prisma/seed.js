@@ -3,7 +3,7 @@ const { faker } = require('@faker-js/faker');
 const bcrypt = require("bcrypt");
 
 const prisma = new PrismaClient()
-const saltRounds = 7;
+const saltRounds = 7; //I like prime numbers
 
 //make a pre-hashed password via faker & bcrypt
 const passwordFakerHasher = async () => {
@@ -12,9 +12,11 @@ const passwordFakerHasher = async () => {
     return hashedPassword};
 
 
+
 const main = async () =>{
   console.log('Start database seeding')
 
+  //create users
   const user1 = await prisma.user.create({
     data: {username:faker.internet.userName(), password: await passwordFakerHasher()},
   })
@@ -27,7 +29,7 @@ const main = async () =>{
     data:{username:faker.internet.userName(), password: await passwordFakerHasher()},
   })
 
-
+  //create posts
   await prisma.post.createMany({
     data: [ 
       {title:faker.lorem.lines(1) , content:faker.lorem.sentences({ min: 1, max: 3 }) , userId:user1.id},
