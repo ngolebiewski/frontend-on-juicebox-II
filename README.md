@@ -18,9 +18,14 @@ Please submit a link to your Github repo.
 - 10:30am working on the Prisma Database Schema
 - 10:35am looking up "One-to-Many" https://www.prisma.io/docs/orm/prisma-schema/data-model/relations/one-to-many-relations#overview
 - 10:36am fingers crossed, about to do Prisma Migrate on this.
-  ```npx prisma migrate dev --name init```
+  -  ```npx prisma migrate dev --name init```
 - 10:37am Woohoo! error free (as far as I know) Ticket #2 done.
--
+- 10:39am Things running surpisingly smoothly so far. trying to get as much done before heading out for alternate side parking and typing in a car -- Ugh. 
+- 10:40 Seed ticket #3. Psyched about using Faker -- I practiced that last night, to put in well, fake information. It's surprisingly hard to think of a bunch of fake information on your own!
+- 10:42 Doing this... ```npm install @prisma/client``` ... thank you documentation!
+
+
+
 
 
 
