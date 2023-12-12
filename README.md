@@ -5,3 +5,14 @@ For this project, you will be recreating the Juicebox API from scratch with the 
 ## Submission
 
 Please submit a link to your Github repo.
+
+# Nick Golebiewski
+## The Juicebox Blog ##
+
+Haha, this will be like a blog about making a blog API!
+- 10:17am Just setting up files seems a.o.k.
+-   db is titled: juiceboxblog, very creative!
+- 10:19 am installing prisma, etc.
+
+
+

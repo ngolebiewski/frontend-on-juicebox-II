@@ -1,0 +1,26 @@
+{
+  "name": "unit4.improvedjuicebox.starter",
+  "version": "1.0.0",
+  "description": "For this project, you will be recreating the Juicebox API from scratch with the new technologies you've learned. You may structure your project as you wish as long as you meet the requirements. Feel free to use one of the previous workshop solutions as reference! Before you start, make sure to read through the rubric to get a sense of what you will be required to do.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install:stuff": "npm i express && npm i nodemon && npm install jsonwebtoken && npm i bcrypt && npm i morgan && npm i dotenv && npm i express-router && npm install @faker-js/faker --save-dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.3.1",
+    "prisma": "^5.7.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-router": "^0.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.2"
+  }
+}
