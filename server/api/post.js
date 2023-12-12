@@ -19,12 +19,12 @@ router.get('/', async (req, res) => {
     const posts = await prisma.post.findMany();
     res.send(posts);
   } catch(error){
-    res.statusSend(400)
+    res.status(400).send
     console.log(error)
   }
 })
 
-// route "api/post/:id" --> Get one posts!
+// route "api/post/:id" --> Get one post!
 router.get('/:id', async (req, res) => {
   const postId = parseInt(req.params.id)
 
@@ -36,12 +36,10 @@ router.get('/:id', async (req, res) => {
   })
   res.send(onePost || {})
 
-  res.send(posts);
   } catch(error){
-    res.statusSend(418)
+    res.status(400).send
   }
 })
-
 
 
 ////////////////////

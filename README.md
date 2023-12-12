@@ -42,6 +42,8 @@ good soba noodles! Extended my streak on DuoLingo to 236 days en español too.
 - 1:32 PM Now, I'm so ready to continue with making some GET posts routes
 - 1:40 BAM! Get all posts API call complete. Actually, what do you call it?  a route? an API? a path? a method? a restful API?
 - 1:41 PM 🎵 Listening to Leonard Cohen, would love to have on a 12" record and not just on spotify. Hmmm, OAUTH spotify later?
+- 2:14 PM starting to sweat a bit, not because of over active steam heat in NYC apartments, but because of a time crunch feeling. Struggled a bit with token middleware, making token == Tolkein jokes in middleware, and forgetting to require jwt.
+
 
 
 
