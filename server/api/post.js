@@ -42,6 +42,24 @@ router.get('/:id', async (req, res) => {
 })
 
 
+// route "api/post/user/:id" --> Get all posts from a user
+router.get('/user/:id', async (req, res) => {
+  const userId = parseInt(req.params.id)
+
+  try{
+  const userPosts = await prisma.post.findMany({
+    where: {
+      userId: userId,
+    }
+  })
+  res.send(userPosts || {})
+
+  } catch(error){
+    res.status(400).send
+  }
+})
+
+
 ////////////////////
 ///// CREATE ///////
 ////////////////////
