@@ -1,7 +1,15 @@
 const express = require('express')
 const app = express()
+const morgan = require('morgan');
 
-const PORT = 3001
+const PORT = 3000
+
+//logging middleware 
+app.use(morgan("dev"));
+
+///middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 //API routes
 app.use('/auth', require('./auth/index.js'));
