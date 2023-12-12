@@ -46,6 +46,28 @@ router.get('/:id', async (req, res) => {
 ///// CREATE ///////
 ////////////////////
 
+router.post('/', async (req,res) => {
+  if (!req.user) {res.sendStatus(401)} // Give non-users the "non-authorized" boot
+
+  if (req.body){
+    try{
+      const newPost = await prisma.post.create({
+        data: {
+          "title":req.body.title,
+          "content":req.body.content,
+          "userId":req.user.id
+        }
+      })
+
+    console.log(newPost)
+    res.send(newPost);
+    }catch(error) {
+      res.status(400).send(error)
+    }
+  } 
+  else res.status(500).send(error);
+})
+
 
 ////////////////////
 ///// PUT //////////
