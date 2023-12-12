@@ -8,7 +8,7 @@ Please submit a link to your Github repo.
 
 # Nick Golebiewski
 ## The Juicebox Blog 
-## Fullstack Academy Career Sim
+## Fullstack Academy Career Simulation
 ### 12-12-2023 
 
 ## LOL, my notes will be like a stream-of-consciousness blog about making a blog API!
@@ -36,7 +36,8 @@ Please submit a link to your Github repo.
 
 ---
 
-good soba noodles! Extended my streak on DuoLingo to 236 days en español too.
+Lunch: Good soba noodles! Extended my streak on DuoLingo to 236 days en español.
+
 ---
 
 - 1:32 PM Now, I'm so ready to continue with making some GET posts routes
@@ -44,9 +45,13 @@ good soba noodles! Extended my streak on DuoLingo to 236 days en español too.
 - 1:41 PM 🎵 Listening to Leonard Cohen, would love to have on a 12" record and not just on spotify. Hmmm, OAUTH spotify later?
 - 2:14 PM starting to sweat a bit, not because of over active steam heat in NYC apartments, but because of a time crunch feeling. Struggled a bit with token middleware, making token == Tolkein jokes in middleware, and forgetting to require jwt.
 - 2:19PM Feeling better. OK now to post/put/delete blog posts in the API.
-- 2:22 PM (All 2's!!) --> **Ask myself when something isn't working, "is everything imported via require that needs to be?"**
+- 2:22 PM (All 2's!!) --> **Ask myself when something isn't working, "is everything required at the top  that needs to be?"**
 - 2:45 PM Embarrasingly, I jumped up and shouted with joy in my empty apartment when I got the new blog post to work in Postman! mispellings, etc. Will the next ones be easier?
 - 3:00 PM PUT was only somewhat weird. I totally remember to turn the number entered via the URL (param) to a number! 
+- 3:16 PM DELETE is done! Time to test out all routes in postman with a token and without.
+- 4:09 PM Just spent almost an hour writing middleware to check for tokens based off Tyler's middleware from the demo. I think it works...
+- 4:23 PM Submitting this project, but continuing to look into error handling and getting a "catch all" in the code. 
+
 
 
 

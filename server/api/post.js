@@ -94,7 +94,7 @@ router.put('/:id', async (req,res) => {
 
     res.send(updatedPost)
   } catch(error) {
-    res.sendStatus(500);
+    res.sendStatus(400);
   }
 
 })
@@ -119,7 +119,7 @@ router.delete('/:id', async (req,res) => {
 
     res.send(deletedPost)
   } catch(error) {
-    res.sendStatus(500);
+    res.sendStatus(400);
     // res.send(error)
   }
 
