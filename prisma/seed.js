@@ -14,15 +14,30 @@ const passwordFakerHasher = async () => {
 
 const main = async () =>{
   console.log('Start database seeding')
-  await prisma.user.createMany({
+
+  const user1 = await prisma.user.create({
+    data: {username:faker.internet.userName(), password: await passwordFakerHasher()},
+  })
+
+  const user2 = await prisma.user.create({
+    data:{username:faker.internet.userName(), password: await passwordFakerHasher()},
+  })
+
+  const user3 = await prisma.user.create({
+    data:{username:faker.internet.userName(), password: await passwordFakerHasher()},
+  })
+
+
+  await prisma.post.createMany({
     data: [ 
-      {username:faker.internet.userName(), password: await passwordFakerHasher()},
-      {username:faker.internet.userName(), password: await passwordFakerHasher()},
-      {username:faker.internet.userName(), password: await passwordFakerHasher()},
+      {title:faker.lorem.lines(1) , content:faker.lorem.sentences({ min: 1, max: 3 }) , userId:user1.id},
+      {title:faker.lorem.lines(1) , content:faker.lorem.sentences({ min: 1, max: 3 }) , userId:user2.id},
+      {title:faker.lorem.lines(1) , content:faker.lorem.sentences({ min: 1, max: 3 }) , userId:user2.id},
+      {title:faker.lorem.lines(1) , content:faker.lorem.sentences({ min: 1, max: 3 }) , userId:user3.id},
     ]
   })
 
-  // ... you will write your Prisma Client queries here
+  console.log('Finished seeding database')
 }
 
 //Don't mess with this --> Perfect and from Prisma
