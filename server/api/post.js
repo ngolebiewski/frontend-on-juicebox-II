@@ -48,8 +48,11 @@ router.get('/:id', async (req, res) => {
 
 // route "api/post/" --> Create a new post
 router.post('/', async (req,res) => {
-  if (!req.user) {res.sendStatus(401)} // Give non-users the "non-authorized" boot
-
+  // Give non-users the "non-authorized" boot
+  if (!req.user) {res.sendStatus(401); 
+    return}
+  
+  // Only users here
   if (req.body){
     try{
       const newPost = await prisma.post.create({
@@ -75,7 +78,8 @@ router.post('/', async (req,res) => {
 
 // route "api/post/:id" --> Update a post by post id
 router.put('/:id', async (req,res) => {
-  if (!req.user) {res.sendStatus(401)} // Give non-users the "non-authorized" boot
+  if (!req.user) {res.sendStatus(401); 
+    return} // Give non-users the "non-authorized" boot
 
   const postId = parseInt(req.params.id)
   const postBody = req.body
@@ -98,6 +102,31 @@ router.put('/:id', async (req,res) => {
 ////////////////////
 ///// DELETE ///////
 ////////////////////
+
+// route "api/post/:id" --> Delete a post by post id
+router.delete('/:id', async (req,res) => {
+  if (!req.user) {res.sendStatus(401); 
+    return} // Give non-users the "non-authorized" boot
+
+  const postId = parseInt(req.params.id)
+  
+  try{
+    const deletedPost = await prisma.post.delete({
+      where:{
+        id: postId,
+      }
+    })
+
+    res.send(deletedPost)
+  } catch(error) {
+    res.sendStatus(500);
+    // res.send(error)
+  }
+
+})
+
+
+
 
 
 module.exports = router;
