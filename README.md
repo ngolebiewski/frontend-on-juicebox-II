@@ -29,7 +29,14 @@ Please submit a link to your Github repo.
 - 11:27am finsihed seed.js. It's really cold in this car. Can't run heat because the battery will die since I hardly drive.
 - 11:34 SERVER TIME - looking up https://expressjs.com/en/guide/routing.html to remember how to require, etc. for server.js. I think I need fingerless gloves for typing outdoors in the winter.
 - 11:52 API and AUTH routes set up. Just 38 minutes to go until I can leave this car!
+- 12:03 PM made first auth/register api and it returns an empty object. MIDDLEWARE time!
+- 12:44 back from car and whew, NYC is the worst in that regard! I couldn't figure out why my register api wasn't working and then 15minutes later, because i had "body" and not "data" in the spot to create a user!!!! Dude!
+- 12:46 Making a french press of coffee...
+- 1:05pm ...The coffee's really good. Plus, the login and auth routes are all set, including bcrypt and tokens. Lunch break.
 
+---
+
+- 
 
 
 

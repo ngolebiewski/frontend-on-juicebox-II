@@ -8,10 +8,7 @@ const prisma = new PrismaClient()
 const saltRounds = 7; //I still like prime numbers
 
 
-// router.use('/', (req, res) => {
-//   res.send('hello, auth here');
-// })
-
+// route: "auth/register"
 router.post('/register', async (req, res) => {
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, saltRounds);
@@ -28,11 +25,35 @@ router.post('/register', async (req, res) => {
 
 } catch(error){
   //to do get a better error
-  res.send(error)
+  res.send(error);
 }}
 )
 
+// route: "auth/login"
 router.post('/login', async (req, res) =>{
+  try{
+    const user = await prisma.user.findUnique({
+    where: {
+      username: req.body.username
+    }
+  })
+
+  if (!user) {
+    res.sendStatus(401);
+  }
+
+  const checkedPassword = await bcrypt.compare(req.body.password, user.password);
+
+  if (checkedPassword) {
+    const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET);
+    res.send(token)
+  } else {
+    res.sendStatus(401);
+  }
+
+} catch(error){
+  res.sendStatus(401);
+}
 
 })
 
