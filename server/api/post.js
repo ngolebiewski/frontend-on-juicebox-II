@@ -8,16 +8,55 @@ const prisma = new PrismaClient()
 //   res.send('hello, api/post here');
 // })
 
+
+////////////////////
+///// GET //////////
+////////////////////
+
 // route "api/post/" --> Get all posts!
 router.get('/', async (req, res) => {
   try{
-  const posts = await prisma.post.findMany();
-  res.send(posts);
+    const posts = await prisma.post.findMany();
+    res.send(posts);
   } catch(error){
     res.statusSend(400)
     console.log(error)
   }
 })
+
+// route "api/post/:id" --> Get one posts!
+router.get('/:id', async (req, res) => {
+  const postId = parseInt(req.params.id)
+
+  try{
+  const onePost = await prisma.post.findUnique({
+    where: {
+      id: postId,
+    }
+  })
+  res.send(onePost || {})
+
+  res.send(posts);
+  } catch(error){
+    res.statusSend(418)
+  }
+})
+
+
+
+////////////////////
+///// CREATE ///////
+////////////////////
+
+
+////////////////////
+///// PUT //////////
+////////////////////
+
+
+////////////////////
+///// DELETE ///////
+////////////////////
 
 
 module.exports = router;

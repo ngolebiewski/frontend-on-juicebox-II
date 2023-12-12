@@ -11,7 +11,7 @@ Please submit a link to your Github repo.
 ## Fullstack Academy Career Sim
 ### 12-12-2023 
 
-## LOL, my notes will be like a blog about making a blog API!
+## LOL, my notes will be like a stream-of-consciousness blog about making a blog API!
 - 10:17am Just setting up files seems a.o.k.
 -   db is titled: juiceboxblog, very creative!
 - 10:19 am installing prisma, etc. with npm init -y, following along on the prisma documentation: https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases-node-postgresql
@@ -41,6 +41,9 @@ good soba noodles! Extended my streak on DuoLingo to 236 days en español too.
 
 - 1:32 PM Now, I'm so ready to continue with making some GET posts routes
 - 1:40 BAM! Get all posts API call complete. Actually, what do you call it?  a route? an API? a path? a method? a restful API?
+- 1:41 PM 🎵 Listening to Leonard Cohen, would love to have on a 12" record and not just on spotify. Hmmm, OAUTH spotify later?
+
+
 
 
 
