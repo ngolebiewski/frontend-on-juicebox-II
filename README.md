@@ -8,11 +8,19 @@ Please submit a link to your Github repo.
 
 # Nick Golebiewski
 ## The Juicebox Blog ##
+### 12-12-2023 
 
-Haha, this will be like a blog about making a blog API!
+## LOL, my notes will be like a blog about making a blog API!
 - 10:17am Just setting up files seems a.o.k.
 -   db is titled: juiceboxblog, very creative!
-- 10:19 am installing prisma, etc.
+- 10:19 am installing prisma, etc. with npm init -y, following along on the prisma documentation: https://www.prisma.io/docs/getting-started/setup-prisma/start-from-scratch/relational-databases-node-postgresql
+- 10:25am used the "install:stuff" script I wrote to install the various packages that will be needed. 
+- 10:30am working on the Prisma Database Schema
+- 10:35am looking up "One-to-Many" https://www.prisma.io/docs/orm/prisma-schema/data-model/relations/one-to-many-relations#overview
+- 10:36am fingers crossed, about to do Prisma Migrate on this.
+  ```npx prisma migrate dev --name init```
+- 10:37am Woohoo! error free (as far as I know) Ticket #2 done.
+-
 
 
 
