@@ -36,6 +36,10 @@ const main = async () =>{
       {title:faker.lorem.lines(1) , content:faker.lorem.sentences({ min: 1, max: 3 }) , userId:user2.id},
       {title:faker.lorem.lines(1) , content:faker.lorem.sentences({ min: 1, max: 3 }) , userId:user2.id},
       {title:faker.lorem.lines(1) , content:faker.lorem.sentences({ min: 1, max: 3 }) , userId:user3.id},
+      {title:faker.lorem.lines(1) , content:faker.lorem.sentences({ min: 3, max: 8 }) , userId:user1.id},
+      {title:faker.lorem.lines(1) , content:faker.lorem.sentences({ min: 3, max: 8 }) , userId:user2.id},
+      {title:faker.lorem.lines(1) , content:faker.lorem.sentences({ min: 3, max: 8 }) , userId:user2.id},
+      {title:faker.lorem.lines(1) , content:faker.lorem.sentences({ min: 3, max: 8 }) , userId:user3.id},
     ]
   })
 

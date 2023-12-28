@@ -3,6 +3,7 @@ const app = express()
 const morgan = require('morgan');
 const jwt = require('jsonwebtoken');
 require("dotenv").config();
+const path = require('path');
 
 
 const PORT = process.env.PORT || 3000;
@@ -39,9 +40,18 @@ app.use('/auth', require('./auth/index.js'));
 app.use('/api', require('./api/index.js'));
 
 // respond with "hello world" when a GET request is made to the homepage
-app.get('/', (req, res) => {
-  res.send('<h1>Juicebox Blog API</h1>')
-})
+// app.get('/', (req, res) => {
+//   res.send('<h1>Juicebox Blog API</h1>')
+// })
+
+//../juiceboxblog.
+app.use("/assets", express.static('juicebox-blog/dist/assets'));
+
+app.get("/", (req, res, next) => {
+  console.log(path.join(__dirname, '../', 'juicebox-blog', 'dist', 'index.html'))
+  res.sendFile(path.join(__dirname, '../', 'juicebox-blog', 'dist', 'index.html'))
+});
+
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);

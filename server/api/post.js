@@ -19,8 +19,8 @@ router.get('/', async (req, res) => {
     const posts = await prisma.post.findMany();
     res.send(posts);
   } catch(error){
-    res.status(400).send
-    console.log(error)
+    res.status(400).send(error)
+    console.error(error)
   }
 })
 
